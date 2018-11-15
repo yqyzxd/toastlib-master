@@ -11,6 +11,7 @@ public class NotificationUtil {
 
     /**
      * 用来判断是否开启通知权限
+     * @param context
      * */
     public static boolean isNotificationEnabled(Context context){
 

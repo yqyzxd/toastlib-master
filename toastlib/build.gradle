@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'bintray-release'
 android {
     compileSdkVersion 26
 
@@ -32,4 +32,15 @@ dependencies {
     testImplementation 'junit:junit:4.12'
   //  androidTestImplementation 'com.android.support.test:runner:1.0.1'
    // androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
+
+//命令行中./gradlew clean build bintrayUpload -PbintrayUser=yqyzxd -PbintrayKey=7111b40cc96f58430ceac2891dcf8fc52d6fdc1f -PdryRun=false
+//添加
+publish {
+    userOrg = 'yqyzxd'//bintray.com用户名
+    groupId = 'com.wind'//jcenter上的路径
+    artifactId = 'toast'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'toastcompat for android'//描述，不重要
+    website = 'https://github.com/yqyzxd/toastlib-master'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }
